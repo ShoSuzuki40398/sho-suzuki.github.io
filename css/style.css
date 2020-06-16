@@ -1,0 +1,409 @@
+/*------------------------------------
+     base
+-------------------------------------*/
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a:link, a:valid, a:hover, a:active {
+    color: #7c5119;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    /* padding: 30px; */
+    background-color: #f6f7fb;
+    color: #333;
+    font-size: 1.2rem;
+    font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    text-align: center;
+}
+
+/*------------------------------------
+     section
+-------------------------------------*/
+section {
+    margin: 60 0;
+    padding: 80px 0;
+}
+
+.section-color-01 {
+    background-color: rgb(230, 230, 230);
+}
+
+.section-color-02 {
+    background-color: white;
+}
+
+.section-header {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    font-size: 6rem;
+    letter-spacing: 2px;
+    margin: 30px auto;
+}
+
+.section-header::before,
+.section-header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #000;
+}
+.section-header::after {
+    bottom: 5px;
+}
+
+/* .section-inner {
+} */
+/*------------------------------------
+     parts
+-------------------------------------*/
+/* 縁取り */
+.font-outline-2x {
+    text-shadow    : 
+    2px  2px 1px #003366,
+   -2px  2px 1px #003366,
+    2px -2px 1px #003366,
+   -2px -2px 1px #003366,
+    2px  0px 1px #003366,
+    0px  2px 1px #003366,
+   -2px  0px 1px #003366,
+    0px -2px 1px #003366;
+}
+
+.font-outline {
+    text-shadow    : 
+    1px  1px 1px #003366,
+   -1px  1px 1px #003366,
+    1px -1px 1px #003366,
+   -1px -1px 1px #003366,
+    1px  0px 1px #003366,
+    0px  1px 1px #003366,
+   -1px  0px 1px #003366,
+    0px -1px 1px #003366;
+}
+
+/*------------------------------------
+     header
+-------------------------------------*/
+.header {
+    height: 480px;
+    background: url("../img/header_bg.jpg")no-repeat center center;
+}
+
+.header-logo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 7.6rem;
+    color: white;
+    margin: 200px 0 50px;
+}
+
+.site-title-sub {
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+    color: white;
+    line-height: 1;
+}
+
+.site-title-sub::before,
+.site-title-sub::after {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 2px;
+    background-color: white;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+.header-buttons {
+    margin-top: 50px;
+}
+
+.header-button {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.header-button:hover {
+    opacity: 0.95;
+    box-shadow: 0 0 8px gray;
+    transition: 0.15s;
+}
+
+/*------------------------------------
+     navigation
+-------------------------------------*/
+.global-nav {
+    background-color: white;
+    padding: 10px 0;
+}
+
+
+.global-nav .nav-item,
+.global-nav .nav-item a {
+    display: inline-block;
+}
+
+.global-nav .nav-item{
+    margin: 0 10px;
+}
+
+.global-nav .nav-item a{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.global-nav .nav-item a:hover {
+    opacity: 0.9;
+    border-bottom: 1px solid black;
+}
+
+/*------------------------------------
+     profile
+-------------------------------------*/
+.profile-image-block {
+    background: url("../img/profile_1000x.png");
+    display: inline-block;
+    background-position: left top;
+    width: 230px;
+    height: 230px;
+    background-size: cover;
+    border: 2px solid gray;
+    border-radius: 50%;
+}
+
+.profile-description-block {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.profile-description {
+    line-height: 2;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    margin: 30px 0;
+}
+
+/*------------------------------------
+     skill
+-------------------------------------*/
+/* .skill {
+    margin-top: 60px;
+} */
+
+.skill-card-table {
+    display: table;
+    margin: 0 auto;
+    width: 900px;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    table-layout: fixed;
+}
+
+.skill-card {
+    display: table-cell;
+    background-color: white;
+    border: 1.5px solid gray;
+    width: 100px;
+}
+
+.skill-card-title {
+    padding: 15px 0;
+    font-size: 3.0rem;
+    font-weight: bold;
+}
+
+.skill-table {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.7em;
+    border-collapse: separate;
+    border-spacing: 50px 35px;
+}
+
+
+/*------------------------------------
+     work
+-------------------------------------*/
+.work-card-table {
+    display: table;
+    width: 70%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: 0 auto;
+}
+
+.work-card {
+    display: table-cell;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.work-image {
+    display: block;
+    width: 100%;
+    padding: 5px;
+}
+
+.work-description {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgb(233, 233, 233);
+}
+
+.work-description .work-card-title {
+    font-size: 1.6rem;
+}
+
+.work-description .work-text {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+/*------------------------------------
+     contact
+-------------------------------------*/
+.contact-text {
+    font-size: 1.6rem;
+}
+
+.contact-addres {
+    padding: 10px;
+    font-size: 2rem;
+}
+
+/*------------------------------------
+     footer
+-------------------------------------*/
+footer {
+    background-color: gray;
+    padding: 10px 0;
+}
+
+footer .footer-link {
+    padding: 10px;
+}
+
+footer .link-item,
+footer .link-item a{
+    display: inline-block;
+}
+
+footer .link-item {
+    margin: 0 10px;
+}
+
+footer .link-item a{
+    letter-spacing: 1px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+footer .link-item a:hover {
+    opacity: 0.9;
+    border-bottom: 1px solid black;
+}
+
+footer .copyright {
+    font-size: 1.3rem;
+}
+
+/*------------------------------------
+     Responsive
+-------------------------------------*/
+@media (max-width:1024px) {
+
+    /* header */
+    .site-title {
+        margin: 50px 0 50px;
+    }
+
+    .site-title-sub::before,
+    .site-title-sub::after {
+        display: block;
+        margin: 10px auto;
+        background-color: rgb(190, 190, 190);
+    }
+
+    .header-button:hover {
+        opacity: 1;
+    }
+
+    /* navigation */
+    .global-nav .nav-item a{
+        font-size: 1.4rem;
+    }
+
+    /* profile */
+    .profile-description {
+        line-height: 1.8;
+        font-size: 1.4rem;
+        margin: 30px 0;
+    }
+
+    /* skill */
+    .skill-card,
+    .skill-card-table {
+        display: block;
+    }
+
+    .skill-card {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+    .skill-card-table {
+        width: 100%;
+    }
+
+    .skill-card-title {
+        /* font-size: 1.4rem; */
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .skill-card {
+        width: 350px;
+    }
+
+    .skill-card-title {
+        margin-top: 10px;
+    }
+    
+    .skill-table {
+        font-size: 1.4em;
+    }
+}
