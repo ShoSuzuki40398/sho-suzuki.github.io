@@ -281,6 +281,14 @@ section {
     padding: 10px;
 }
 
+.work-description .work-link {
+    color: black;
+}
+
+.work-description .work-link:hover {
+    opacity: 0.9;
+}
+
 /*------------------------------------
      contact
 -------------------------------------*/
